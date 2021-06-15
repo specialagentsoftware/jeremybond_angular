@@ -1,0 +1,17 @@
+<br>
+<div>
+<a routerLink="/dashboard" routerLinkActive="active">
+  <fa-icon class="fa-2x" style="color:#430d46" [icon]="faBack"></fa-icon>
+</a>
+Back
+</div>
+<div>
+<h3><strong>{{title}}</strong></h3>
+<h3>{{address}}</h3>
+<a href="https://www.google.com/maps/dir/Current+Location/42158+Park+Drive+Avon+,+NC+27915">Drive to Maestrale</a>
+<br>
+<br>
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>

@@ -1,0 +1,77 @@
+<div *ngIf="!isHidden" class="grid-container">
+  <h1 class="mat-h1" style="padding-left: 18px; padding-top: 18px;">Trip Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="150px">
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Address
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+        <a routerLink="/address" routerLinkActive="active" (click)="HideAllButtons()">
+        <fa-icon class="fa-5x" style="color:#430d46" [icon]="faMap"></fa-icon>
+        </a>    
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Schedule
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <a routerLink="/schedule" routerLinkActive="active" (click)="HideAllButtons()">
+          <fa-icon class="fa-5x" style="color:#430d46" [icon]="faCalendarDay"></fa-icon>
+          </a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Food
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <a routerLink="/food" routerLinkActive="active" (click)="HideAllButtons()">
+          <fa-icon class="fa-5x" style="color:#430d46" [icon]="faBurger"></fa-icon>
+        </a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Shopping
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <a routerLink="/shopping" routerLinkActive="active" (click)="HideAllButtons()">
+          <fa-icon class="fa-5x" style="color:#430d46" [icon]="faCart"></fa-icon>
+          </a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Ferry
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <a routerLink="/ferry" routerLinkActive="active" (click)="HideAllButtons()">
+          <fa-icon class="fa-5x" style="color:#430d46" [icon]="faShip"></fa-icon>
+          </a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<router-outlet></router-outlet>

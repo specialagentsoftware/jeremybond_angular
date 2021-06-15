@@ -1,0 +1,39 @@
+img {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  padding: 5px;
+}
+
+tr {
+  padding: 5px;
+  font-size:medium;
+  height: 35px;
+}
+
+div {
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #D3D3D3;
+}
+
+.custom-class {
+  position: fixed;
+  top:30%;
+  transform: translateX(15%);
+  display: inline;
+  background-color: white;
+  align-self: center;
+  height: 60%;
+  width: 75%;
+}

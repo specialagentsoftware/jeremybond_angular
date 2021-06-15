@@ -1,0 +1,55 @@
+  <div>
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <fa-icon class="fa-2x" style="color:#430d46" [icon]="faBack"></fa-icon>
+    </a>
+    Back
+  </div>
+  <div>
+  <div><strong>
+    Recommended food
+  </strong>
+  </div>
+  <div>
+    (there are plenty of other places not on this list)
+  </div>
+  <br>
+  <div>
+  <strong>
+    Tap to call, visit website, get directions, etc.
+  </strong>
+  </div>
+  <br>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Category</th>
+      <th>City</th>
+    </thead>
+  <tbody>
+    <tr *ngFor="let place of restdata" (click)="triggerModal(modalData,place)">
+      <td>{{place.name}}</td>
+      <td>{{place.category}}</td>
+      <td>{{place.city}}</td>
+    </tr>
+  </tbody>
+  </table>
+  
+  <ng-template #modalData let-modal id="modalData">
+    <div class="modal custom-class">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Details</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <a href="tel:2529953109">Call us at {{modaltel}}</a>
+      <p>Address: {{modaladdress}}</p>
+      <p>Website: <a href={{modalwebsite}}>{{modalname}}</a></p>
+      <p>Directions: <a href={{modalmaplink}}>Go to {{modalname}}</a></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+    </div>
+  </div>
+  </ng-template>
