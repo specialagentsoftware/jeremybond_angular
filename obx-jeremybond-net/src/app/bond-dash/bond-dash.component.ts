@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { faMap, faCalendarDay, faHamburger, faCartPlus, faShip } from '@fortawesome/free-solid-svg-icons';
+import { faMap, faCalendarDay, faHamburger, faCartPlus, faShip, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-bond-dash',
@@ -14,6 +14,7 @@ export class BondDashComponent {
   faBurger = faHamburger
   faCart = faCartPlus
   faShip = faShip
+  faSearch = faSearch
   isHidden:boolean = false
 
   HideAllButtons() {

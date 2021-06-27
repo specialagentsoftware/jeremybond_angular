@@ -71,6 +71,20 @@
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Search
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <a routerLink="/search" routerLinkActive="active" (click)="HideAllButtons()">
+          <fa-icon class="fa-5x" style="color:#430d46" [icon]="faSearch"></fa-icon>
+          </a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
   </mat-grid-list>
 </div>
 

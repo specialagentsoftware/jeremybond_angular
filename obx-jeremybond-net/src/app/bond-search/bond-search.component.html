@@ -1,0 +1,44 @@
+<div>
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <fa-icon class="fa-2x" style="color:#430d46" [icon]="faBack"></fa-icon>
+    </a>
+    Back
+  </div>
+  <div>
+    <h1>Enter Search terms and select city</h1>
+   
+    <form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)">
+       
+      <div class="form-group">
+          <label for="firstName">Search Terms</label>
+          <input required minlength="3" maxlength="20" ngModel name="searchTerm" type="text" #searchTerm="ngModel" class="form-control" id="searchTerm">
+          <div class="alert alert-danger" *ngIf="searchTerm.touched && !searchTerm.valid">
+              <div *ngIf="searchTerm.errors?.required">Search Term is required.</div>
+              <div *ngIf="searchTerm.errors?.minlength">Search Term is minimum {{ searchTerm.errors?.minlength.requiredLength }} characters.</div>
+              <div *ngIf="searchTerm.errors?.maxlength">Search Term is maximum 20 characters.</div>
+          </div>
+      </div>
+       
+      <div class="form-group">
+          <label for="lastName">City</label>
+          <select required ngModel name="city" type="text" #city="ngModel" class="form-control" id="city">
+              <option value="" aria-checked="true">Select City</option>
+              <option value="Kitty Hawk">Kitty Hawk</option>
+              <option value="Kill Devil Hills">Kill Devil Hills</option>
+              <option value="Nags Head">Nags Head</option>
+              <option value="Rodanthe">Rodanthe</option>
+              <option value="Waves">Waves</option>
+              <option value="Salvo">Salvo</option>
+              <option value="Avon">Avon</option>
+              <option value="Buxton">Buxton</option>
+              <option value="Frisco">Frisco</option>
+              <option value="Hatteras">Hatteras</option>
+          </select>
+          <div class="alert alert-danger" *ngIf="city.touched && !city.valid">
+              City is required.
+          </div>
+      </div>
+       <br>
+      <button class="btn btn-primary" type="submit" [class.disabled]="!contactForm.valid">Submit</button>
+      
+    </form>

@@ -32,6 +32,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { BondShoppingTableComponent } from './bond-shopping-table/bond-shopping-table.component';
 import { BondFerryTableComponent } from './bond-ferry-table/bond-ferry-table.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BondSearchComponent } from './bond-search/bond-search.component';
+import { FormsModule } from '@angular/forms';
 
 //apiKey:"AIzaSyDJCvaWdGrK8FY7_zNCPy4va-rzq6nG1-8"
 
@@ -47,7 +49,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BondShoppingComponent,
     BondFoodTableComponent,
     BondShoppingTableComponent,
-    BondFerryTableComponent
+    BondFerryTableComponent,
+    BondSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    NgbModule    
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

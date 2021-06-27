@@ -6,6 +6,7 @@ import { BondFoodTableComponent } from './bond-food-table/bond-food-table.compon
 import { BondScheduleComponent } from './bond-schedule/bond-schedule.component';
 import { BondShoppingTableComponent } from './bond-shopping-table/bond-shopping-table.component';
 import { BondDashComponent } from './bond-dash/bond-dash.component';
+import { BondSearchComponent } from './bond-search/bond-search.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'/dashboard',pathMatch:"full"},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'schedule', component: BondScheduleComponent },
   { path: 'shopping', component: BondShoppingTableComponent },
   { path: 'dashboard', component: BondDashComponent },
+  { path: 'search', component: BondSearchComponent },
   { path: '**', redirectTo:'/dashboard' }
 ];
 
