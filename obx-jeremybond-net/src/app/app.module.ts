@@ -35,8 +35,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BondSearchComponent } from './bond-search/bond-search.component';
 import { FormsModule } from '@angular/forms';
 
-//apiKey:"AIzaSyDJCvaWdGrK8FY7_zNCPy4va-rzq6nG1-8"
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +65,7 @@ import { FormsModule } from '@angular/forms';
     MatGridListModule,
     MatCardModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDJCvaWdGrK8FY7_zNCPy4va-rzq6nG1-8'
+      apiKey: ''
     }),
     CalendarModule.forRoot({
       provide: DateAdapter,
